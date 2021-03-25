@@ -83,7 +83,7 @@ extension SyncEngine {
     
 }
 
-public enum Notifications: String, NotificationName {
+public enum IceCreamNotifications: String, NotificationName {
     case cloudKitDataDidChangeRemotely
 }
 

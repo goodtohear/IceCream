@@ -70,7 +70,7 @@ extension DatabaseManager {
     }
     
     func startObservingRemoteChanges() {
-        NotificationCenter.default.addObserver(forName: Notifications.cloudKitDataDidChangeRemotely.name, object: nil, queue: nil, using: { [weak self](_) in
+        NotificationCenter.default.addObserver(forName: IceCreamNotifications.cloudKitDataDidChangeRemotely.name, object: nil, queue: nil, using: { [weak self](_) in
             guard let self = self else { return }
             DispatchQueue.global(qos: .utility).async {
                 self.fetchChangesInDatabase(nil)
